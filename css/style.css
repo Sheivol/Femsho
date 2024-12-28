@@ -4,9 +4,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
 }
 
 /*----- INDEX -----*/
+
+main{
+    padding-bottom: 1990px;
+}
 
 header nav ul{
     list-style: none;
@@ -28,18 +36,18 @@ header{
 }
 
 .logo img{
-    height: 90px;
+    height: 60px;
 }   
 
 .links_index li{
     display: inline-block;
     padding: 0px 10px;
-    font-size: 25px;
+    font-size: 20px;
     padding-right: 70px;
 }
 
 .user a{
-    font-size: 22px;
+    font-size: 20px;
     padding: 0px 10px;
     text-decoration: none;
     color: white;
@@ -49,28 +57,29 @@ header{
     background-image: url(../img/shoppify.jpeg);
     background-size: cover;
     background-position: center center;
-    top: 100px;
-    height: 1150px;
+    top: 75px;
+    height: 500px;
     width: 100%;
-    position: fixed;
+    position: absolute;
 }
+
 
 .banner-area h2{
     padding-top: 10%;
-    font-size: 100px;
+    font-size: 60px;
     color: white;
 }
 
 .content-area{
     width: 100%;
-    height: 1500px;
+    height: 200px;
     position: relative;
     background: white;
-    top: 600px;
+    top: 400px;
 }
 
 .content-area h2{
-    font-size: 40px;
+    font-size: 25px;
     margin: 0;
     padding-top: 2%;
     letter-spacing: 4%;
@@ -80,7 +89,7 @@ header{
     padding: 1% 1%;
     line-height: 40px;
     text-align: center;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 body{
@@ -89,52 +98,65 @@ body{
 }
 
 .container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background: #dfdfdf;
-}
-
-.card{
     background: white;
-    width: 500px;
-    margin: 70px;
-    border-radius: 15px;
-    border: 3px solid black;
+    padding: 15px 9%;
 }
 
-.card-image{
-    height: 250px;
-    margin-bottom: 15px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.card-1{
-    background-image: url(../img/br-pl.png);
-}
-.card-2{
-    background-image: url(../img/or-plat.png);
-}
-.card-3{
-    background-image: url(../img/asc-rad.png);
-}
-
-.card h2{
-    padding: 10px;
-}
-.card a{
-    background-color: black;
-    color: white;
-    padding: 15px 20px;
-    display: block;
+.container .heading{
     text-align: center;
-    margin: 20px 50px;
-    border-radius: 15px 15px 15px 15px;
-}
-.card p{
-    padding: 5%;
+    padding-bottom: 35px;
+    color: black;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     font-size: 25px;
+}
+
+.container .card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 50px;
+}
+
+.container .card-container .card{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.container .card-container .card img{
+    height: 185px;
+}
+
+.container .card-container .card h2{
+    color: #444;
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+.container .card-container .card p{
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.container .card-container .card .btn{
+    margin-top: 10px;
+    display: inline-block;  
+    background: #333;
+    color: white;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+}
+
+.container .card-container .card .btn:hover{
+    letter-spacing: 1px;
+}
+
+.container .card-container .card:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    transform: scale(1.02);
 }
 
 .about{
@@ -145,12 +167,9 @@ body{
 
 .about img{
     height: auto;
-    width: 600px;
-    border-radius: 15px 15px 15px 15px;
-}
-
-.about-text{
-    width: 550px;
+    width: 450px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
 }
 
 .about-text h2{
@@ -162,12 +181,12 @@ body{
 .about-text p{
     font-size: 25px;
     text-transform: capitalize;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
 }
 
 .about-main{
-    width: 1350px;
+    width: 1000px;
     max-width: 95%;
     margin: 0 auto;
     display: flex;
@@ -177,102 +196,102 @@ body{
 
 .gift-card-container{
     background: #dfdfdf;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    gap: 20px;
-    justify-content: center;
+    padding: 20px 1%;
+    padding-bottom: 5px;
 }
 
-.gift-card-container div img{
-    width: 70px;
-    height: 70px;
+.gift-card-container .gift-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.gift-card-container .gift-card .gift-card-d{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    padding: 0 22px;
+}
+
+.gift-card-container .gift-card .gift-card-d img{
+    height: 60px;
 }
 
 .gift-card h3{
-    font-size: 25px;
-    margin-left: 10px;
+    font-size: 15px;
 }
 
 .gift-card span{
-    font-size: 20px;
+    font-size: 13px;
     margin-left: 10px;
 }
 
 .gift-card-d{
     border-radius: 15px 15px 15px 15px;
     background: white;
-    padding: 20px;
     display: flex;
     align-items: center;
 }
 
-.container{
-    padding-top: 70px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.cardv-container{
     background: white;
+    padding: 15px 2%;
 }
 
-.cardv{
-    background: #ead5f0;
-    width: 500px;
-    height: 550px;
-    margin: 20px;
-    border-radius: 15px;
-}
-
-.card-image{
-    height: 300px;
-    margin-bottom: 15px;
-    background-size: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.event-1{
-    background-image: url(../img/event1.jpg);
-}
-.event-2{
-    background-image: url(../img/event2.jpg);
-}
-.event-3{
-    background-image: url(../img/event3.jpg);
-}
-.event-4{
-    background-image: url(../img/event4.jpg);
-}
-
-.cardv h3{
+.cardv-container .cardv-heading{
+    text-align: center;
+    color: black;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     font-size: 25px;
-    text-align: left;
-    margin: 10px;
 }
 
-.cardv span{
-    text-align: left;
-    padding: 4%;
-    font-size: 18px;
-    background-color: #dfc1e7;
-    border-radius: 10px 10px 10px 10px;
-    display: block;
-    margin-left: 8px;
-    margin-right: 170px;
+.cardv-container .cardv-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
 }
 
-.cardv p{
-    text-align: left;
-    padding: 2%;
+.cardv-container .cardv-content .cardv{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    background: white;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.cardv-container .cardv-content .cardv:hover{
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    transform: scale(1.02);
+}
+
+.cardv-container .cardv-content .cardv img{
+    height: 170px;
+    width: 300px;
+}
+
+.cardv-container .cardv-content .cardv h2{
     font-size: 22px;
+    padding: 10px 0;
+}
+
+.cardv-container .cardv-content .cardv p{
+    font-size: 17px;
+    line-height: 1.8;
 }
 
 footer{
     background-color: #3B1C32;
-    padding: 50px;
-    text-align: center;
+    font-size: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
 }
 
+footer ul li a{
+    text-decoration: none;
+}
 
 /*----- TORNEOS -----*/
 
@@ -281,3 +300,56 @@ footer{
 /*----- CONTACTO -----*/
 
 /*----- AYUDA -----*/
+
+@media screen and (max-width:768px){
+   .container{
+        padding: 20px;
+   } 
+   .cardv-container{
+    padding: 20px;
+   }
+   .gift-card-container{
+    padding: 20px;
+   }
+    .gift-card-container .gift-card {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        padding-bottom: 10px;
+    } 
+    .gift-card-container .gift-card .gift-card-d {
+        padding: 0 10px;
+    }
+    .gift-card-container .gift-card .gift-card-d img {
+        height: 50px;
+    }
+    .gift-card h3 {
+        font-size: 12px;
+    }
+    .gift-card span {
+        font-size: 10px;
+    }
+    .about {
+        padding: 40px 0px;
+    }
+
+    .about img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .about-main {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
