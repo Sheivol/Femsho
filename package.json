@@ -1,0 +1,19 @@
+{
+  "name": "coderhouse",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi!, I'm Juana</h1>\r <h3 align=\"center\">A passionate frontend and video game developer from Argentina</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sheivol/CoderHouse.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sheivol/CoderHouse/issues"
+  },
+  "homepage": "https://github.com/Sheivol/CoderHouse#readme"
+}
