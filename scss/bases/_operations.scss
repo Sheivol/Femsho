@@ -1,10 +1,59 @@
 //* VARIABLES
 
-$color-principal: #b373ff;
-$color-secundario: #c391ff;
+$banner-gradient: radial-gradient(ellipse at bottom, #32004b 0%, #510850 25%, #1f0030 50%, #0e0038 75%, #0d1a33 100%);
+$banner-font: "Lato";
+$shadow-color: rgba(0, 0, 0, 0.2);
+$card-bg: #fff;
+$primary-color-index: #444;
+$button-bg: #ec73ff;
+$button-hover-bg: #f08cff;
+$heading-color: #2c3e50;
+$text-color: #7f8c8d;
+
+$color-primary: #b373ff;
+$secondary-color: #b373ff;
+$color-background-footer: rgb(15, 25, 35);
+$color-footer-background: #0a1017;
+$color-white: #fff;
+$color-dark: #0d2033;
+$color-black: #000;
+
+$primary-bg: rgb(15, 25, 35);
+$text-color-us: #333;
+$sub-text-color: #666;
+
+$background-dark: #1e1e1e;
 
 //* LISTAS
 
-$colores-basicos: #444;
-$colores-varios: #ec73ff, #f08cff;
-$eclipse: #32004b, #510850, #1f0030, #0e0038, #0d1a33;
+$banner-gradient: radial-gradient(ellipse at bottom, #32004b 0%, #510850 25%, #1f0030 50%, #0e0038 75%, #0d1a33 100%);
+
+@mixin button-style($bg-color, $text-color) {
+    display: inline-block;
+    background: $bg-color;
+    color: $text-color;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    transition: letter-spacing 0.3s;
+    &:hover {
+        letter-spacing: 1px;
+    }
+}
+
+@mixin card-style($shadow-color, $bg-color) {
+    box-shadow: 0 5px 10px $shadow-color;
+    border-radius: 5px;
+    background: $bg-color;
+    text-align: center;
+    padding: 30px 20px;
+    &:hover {
+        box-shadow: 0 10px 15px $shadow-color;
+        transform: scale(1.02);
+    }
+}
+
+%text-center {
+    text-align: center;
+    color: white;
+}

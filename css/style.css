@@ -20,10 +20,10 @@ body {
     padding: 0;
 }
 
-/*----- INDEX -----*/
+/*----- NAVBAR -----*/
 
 .navbar {
-    background-color: white;
+    background-color: rgb(11, 4, 36);
     height: 80px;
     margin: 12px;
     border-radius: 16px;
@@ -40,6 +40,10 @@ body {
     transition: 0.3s background-color;
 }
 
+.nav-item a:hover {
+    color: white;
+}
+
 .login-button:hover {
     background-color: #c391ff;
     color: white;
@@ -53,13 +57,16 @@ body {
 .navbar-toggler:focus .btn-close:focus {
     box-shadow: none;
     outline: none;
-    color: black;
+    color: white;
 }
 
 .nav-link {
-    color: #444;
     font-weight: 500;
     position: relative;
+}
+
+.nav-item a {
+    color: rgb(158, 158, 158);
 }
 
 .nav-link:before {
@@ -75,14 +82,15 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.nav-link:hover::before,.nav-link.active::before {
+.nav-link:hover::before,
+.nav-link.active::before {
     width: 100%;
     visibility: visible;
-    color: black;
+    color: white;
 }
 
 .nav-link.active {
-    color: black;
+    color: white;
 }
 
 .navbar-brand {
@@ -90,9 +98,27 @@ body {
     color: #b373ff;
 }
 
+.navbar-brand:hover {
+    color: #c391ff;
+}
+
+/*----- INDEX -----*/
+
 .banner-area {
     background: radial-gradient(ellipse at bottom, #32004b 0%, #510850 25%, #1f0030 50%, #0e0038 75%, #0d1a33 100%);
     height: 44pc;
+    position: relative;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .banner-area .banner-title h2 {
@@ -109,6 +135,8 @@ body {
     font-size: 17px;
     text-align: center;
 }
+
+
 
 .stars {
     width: 1px;
@@ -666,33 +694,11 @@ body {
         498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
 }
 
-.content-area {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    top: 40px;
-}
-
-.content-area h2 {
-    font-size: 25px;
-    margin: 0;
-    padding-top: 2%;
-    letter-spacing: 4%;
-    text-align: center;
-}
-
-.content-area p {
-    padding: 1% 1%;
-    line-height: 40px;
-    text-align: center;
-    font-size: 22px;
-}
-
 .container {
     padding: 15px 9%;
 }
 
-.content-area .heading {
+.heading {
     text-align: center;
     padding-bottom: 35px;
     color: black;
@@ -715,7 +721,9 @@ body {
 }
 
 .container .card-container .card img {
+    object-fit: cover;
     height: 185px;
+    width: 100%;
 }
 
 .container .card-container .card h2 {
@@ -781,6 +789,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 30px;
 }
 
 .gift-card-container {
@@ -805,7 +814,7 @@ body {
 }
 
 .gift-card-container .gift-card .gift-card-d img {
-    height: 60px;
+    height: 50px;
 }
 
 .gift-card h3 {
@@ -826,6 +835,7 @@ body {
 
 .cardv-container {
     padding: 15px 2%;
+    cursor: pointer;
 }
 
 .cardv-container .cardv-heading {
@@ -839,6 +849,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .cardv-container .cardv-content .cardv {
@@ -846,7 +858,6 @@ body {
     border-radius: 5px;
     background: white;
     text-align: center;
-    padding: 10px 10px;
 }
 
 .cardv-container .cardv-content .cardv:hover {
@@ -855,8 +866,8 @@ body {
 }
 
 .cardv-container .cardv-content .cardv img {
-    height: 170px;
-    width: 300px;
+    height: 185px;
+    width: 100%;
 }
 
 .cardv-container .cardv-content .cardv h3 {
@@ -869,9 +880,179 @@ body {
     line-height: 1.8;
 }
 
+.pie-pagina {
+    width: 100%;
+    background-color: rgb(15, 25, 35);
+    ;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bungee", serif;
+    color: #b373ff;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    cursor: pointer;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #0a1017;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
 /*----- EVENTOS -----*/
 
+.banner-torneo {
+    padding-top: 15pc;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(15, 25, 35);
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bungee", serif;
+}
+
+.torneos-activos {
+    color: white;
+    text-align: center;
+}
+
+.torneos-activos h2 {
+    font-size: 2.5rem;
+    color: #b373ff;
+    margin-bottom: 40px;
+}
+
+.torneos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    padding-top: 5pc;
+    padding-bottom: 5pc;
+}
+
+.torneo {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.torneo:hover {
+    transform: translateY(-10px);
+}
+
+.torneo figure img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #b373ff;
+}
+
+.torneo .info {
+    padding: 20px;
+}
+
+.torneo h3 {
+    font-size: 1.6rem;
+    color: #b373ff;
+    margin-bottom: 10px;
+}
+
+.torneo .fecha {
+    font-size: 1.1rem;
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.torneo .descripcion-event {
+    font-size: 1rem;
+    color: #cfcfcf;
+    margin-bottom: 15px;
+}
+
+.btn-events {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #b373ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-events:hover {
+    background-color: #9b2dff;
+    color: white;
+}
+
 /*----- GUIA -----*/
+
+.banner-guide {
+    padding-top: 15pc;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(15, 25, 35);
+    display: flex;
+    align-items: center;
+    padding-left: 7pc;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bungee", serif;
+}
 
 .dic-info {
     width: 85%;
@@ -957,7 +1138,7 @@ dl>dd:last-child {
     justify-items: center;
 }
 
-.container-guide .heading-guide{
+.container-guide .heading-guide {
     font-size: 32px;
     color: #2c3e50;
     text-align: center;
@@ -1019,7 +1200,6 @@ dl>dd:last-child {
 
 .economy-guide p {
     font-size: 16px;
-    color: #7f8c8d;
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify;
@@ -1027,15 +1207,14 @@ dl>dd:last-child {
 
 .economy-guide h3 {
     font-size: 26px;
-    color: #2c3e50;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 10px;
+    color: #b373ff;
 }
 
 .economy-guide h4 {
     font-size: 20px;
-    color: #34495e;
     font-weight: 500;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -1044,7 +1223,6 @@ dl>dd:last-child {
 .economy-guide ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #5f6a6a;
 }
 
 .economy-guide li {
@@ -1079,6 +1257,10 @@ dl>dd:last-child {
     align-items: center;
 }
 
+.nav-button-guide a {
+    color: white;
+}
+
 .nav-button-guide:hover {
     background-color: #f08cff;
 }
@@ -1089,7 +1271,194 @@ dl>dd:last-child {
 
 /*----- NOSOTROS -----*/
 
+.banner-aboutus {
+    padding-top: 15pc;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(15, 25, 35);
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bungee", serif;
+}
+
+.about-us {
+    padding: 50px 0;
+}
+
+.container-us {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-us h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.team {
+    margin-bottom: 40px;
+}
+
+.team h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-description {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.member {
+    text-align: center;
+}
+
+.member img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.member p {
+    font-size: 20px;
+}
+
+.goals ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-size: 16px;
+    color: #666;
+}
+
+.goals li {
+    margin-bottom: 10px;
+}
+
+.images {
+    margin-top: 50px;
+}
+
+.images h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /*----- NOVEDADES -----*/
+
+.banner-nov {
+    padding-top: 15pc;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(15, 25, 35);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bungee", serif;
+}
+
+.novedades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.novedad:nth-child(odd) {
+    grid-column: span 2;
+}
+
+.novedad {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.novedad:hover {
+    transform: scale(1.05);
+}
+
+.novedad img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido {
+    padding: 15px;
+    text-align: left;
+}
+
+.tittle {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.desc {
+    font-size: 14px;
+    margin-top: 5px;
+    color: white;
+}
+
+.type-nov {
+    font-size: 14px;
+    color: #d91b1b;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contenido span {
+    font-size: 14px;
+    margin-top: 10px;
+    color: white;
+    font-weight: normal;
+}
 
 @media screen and (max-width:768px) {
     .container {
@@ -1100,30 +1469,21 @@ dl>dd:last-child {
         padding: 20px;
     }
 
-    .gift-card-container {
-        padding: 20px;
-    }
-
     .gift-card-container .gift-card {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
-        padding-bottom: 10px;
-    }
-
-    .gift-card-container .gift-card .gift-card-d {
-        padding: 0 10px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     }
 
     .gift-card-container .gift-card .gift-card-d img {
-        height: 50px;
+        height: 40px;
     }
 
     .gift-card h3 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .gift-card span {
-        font-size: 10px;
+        font-size: 12px;
+        margin-left: 8px;
     }
 
     .about {
@@ -1163,9 +1523,67 @@ dl>dd:last-child {
         transition: 0.3s ease-in-out;
     }
 
-    .nav-link:hover::before,.nav-link.active::before {
+    .nav-link:hover::before,
+    .nav-link.active::before {
         width: 100%;
         visibility: visible;
+    }
+
+    .torneos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .torneo {
+        max-width: 90%;
+    }
+
+    .banner-torneo,
+    .banner-guide {
+        font-size: 30px;
+        padding-left: 10px;
+        height: 300px;
+    }
+
+    .dic-info dl {
+        grid-template-columns: 1fr;
+    }
+
+    .dic-info {
+        padding: 20px;
+    }
+
+    .economy-guide h2,
+    .dic-info h2,
+    .container-guide .heading-guide {
+        font-size: 24px;
+    }
+
+    .banner-nov {
+        font-size: 30px;
+        height: 300px;
+        padding-left: 15px;
+    }
+
+    .novedades-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .novedad:nth-child(odd) {
+        grid-column: span 1;
+    }
+
+    .banner-aboutus {
+        height: auto;
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
     }
 }
 

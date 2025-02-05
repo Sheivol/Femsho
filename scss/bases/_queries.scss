@@ -7,3 +7,130 @@
         transform: translateY(-2000px);
     }
 }
+
+@media screen and (max-width:768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .cardv-container {
+        padding: 20px;
+    }
+
+    .gift-card-container .gift-card {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .gift-card-container .gift-card .gift-card-d img {
+        height: 40px;
+    }
+
+    .gift-card h3 {
+        font-size: 14px;
+    }
+
+    .gift-card span {
+        font-size: 12px;
+        margin-left: 8px;
+    }
+
+    .about {
+        padding: 40px 0px;
+    }
+
+    .about img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    .about-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-link:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #444;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+
+    .torneos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .torneo {
+        max-width: 90%;
+    }
+
+    .banner-torneo,
+    .banner-guide {
+        font-size: 30px;
+        padding-left: 10px;
+        height: 300px;
+    }
+
+    .dic-info dl {
+        grid-template-columns: 1fr;
+    }
+
+    .dic-info {
+        padding: 20px;
+    }
+
+    .economy-guide h2,
+    .dic-info h2,
+    .container-guide .heading-guide {
+        font-size: 24px;
+    }
+
+    .banner-nov {
+        font-size: 30px;
+        height: 300px;
+        padding-left: 15px;
+    }
+
+    .novedades-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .novedad:nth-child(odd) {
+        grid-column: span 1;
+    }
+
+    .banner-aboutus {
+        height: auto;
+        font-size: 30px;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}

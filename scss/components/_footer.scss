@@ -1,0 +1,67 @@
+.button {
+    @include button-style($color-primary, $color-white);
+  }
+  
+  .card {
+    @include card-style($color-dark, $color-background);
+  }
+  
+  .text-center {
+    @extend %text-center;
+  }
+  
+  .pie-pagina {
+    width: 100%;
+    background-color: $color-background-footer;
+  
+    .grupo-1 {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+      padding: 45px 0;
+  
+      .box-logo {
+        @include center-text;
+        font-family: "Bungee", serif;
+        color: $color-primary-footer;
+      }
+  
+      .box {
+        @include box-style($color-dark);
+  
+        h2 {
+          color: $color-white;
+          font-size: 20px;
+        }
+  
+        p {
+          color: $color-text-light;
+          cursor: pointer;
+        }
+  
+        .red-social {
+          a {
+            @include social-icon($color-dark);
+          }
+        }
+      }
+  
+      figure {
+        img {
+          width: 250px;
+        }
+      }
+    }
+  
+    .grupo-2 {
+      @include box-style($color-footer-background, 15px 10px);
+      text-align: center;
+  
+      small {
+        font-size: 15px;
+      }
+    }
+  }

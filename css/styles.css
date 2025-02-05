@@ -16,8 +16,6 @@ body {
   padding: 0;
 }
 
-/* INDEX */
-
 .banner-area {
   background: radial-gradient(ellipse at bottom, #32004b 0%, #510850 25%, #1f0030 50%, #0e0038 75%, #0d1a33 100%);
   height: 44pc;
